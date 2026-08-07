@@ -159,11 +159,18 @@ menuToggle.addEventListener("click", () => {
 
 document.querySelectorAll(".nav-links a").forEach(link=>{
 
-    link.addEventListener("click",()=>{
+    link.addEventListener("click",(e)=>{
 
         navLinks.classList.remove("active");
         menuToggle.classList.remove("active");
         menuToggle.innerHTML="☰";
+        
+        if (link.id === "galleryLink") {
+            document.body.classList.add("gallery-active");
+            window.scrollTo(0, 0);
+        } else {
+            document.body.classList.remove("gallery-active");
+        }
 
     });
 

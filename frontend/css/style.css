@@ -1629,3 +1629,39 @@
     }
 
 }
+
+/* --- Mobile Gallery View Overrides --- */
+.mobile-only {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none !important;
+    }
+    .mobile-only {
+        display: block !important;
+    }
+    
+    /* When on main page (default on mobile), hide the videos */
+    body:not(.gallery-active) #portfolio {
+        display: none !important;
+    }
+    
+    /* When on gallery page, hide everything except portfolio */
+    body.gallery-active #home,
+    body.gallery-active #about,
+    body.gallery-active #services,
+    body.gallery-active #contact,
+    body.gallery-active #intro {
+        display: none !important;
+    }
+    body.gallery-active #portfolio {
+        display: block !important;
+        padding-top: 100px;
+    }
+    
+    body.gallery-active {
+        background-color: #0b0b0b;
+    }
+}
