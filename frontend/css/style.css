@@ -1680,28 +1680,39 @@
         display: none !important;
     }
     .mobile-only {
+        display: list-item !important;
+    }
+
+    /* Portfolio is always visible on mobile — inline on the homepage */
+    #portfolio {
         display: block !important;
     }
-    
-    /* When on main page (default on mobile), hide the videos */
-    body:not(.gallery-active) #portfolio {
-        display: none !important;
+
+    /* Mobile marquee card sizing — show ~2 cards at a time */
+    .portfolio-marquee .port-card {
+        flex: 0 0 clamp(200px, 58vw, 280px) !important;
     }
-    
-    /* When on gallery page, hide everything except portfolio */
-    body.gallery-active #home,
-    body.gallery-active #about,
-    body.gallery-active #services,
-    body.gallery-active #contact,
-    body.gallery-active #intro {
-        display: none !important;
+
+    /* Make marquee full bleed on mobile */
+    .portfolio-marquee {
+        margin: 0 -24px !important;
+        touch-action: pan-y;
     }
-    body.gallery-active #portfolio {
-        display: block !important;
-        padding-top: 100px;
+
+    /* Slightly shorter card height on mobile */
+    .portfolio-marquee .port-card .port-thumb {
+        aspect-ratio: 3 / 4 !important;
     }
-    
-    body.gallery-active {
-        background-color: #0b0b0b;
+
+    /* Swipe hint below the strip */
+    .portfolio-marquee::after {
+        content: "← swipe →";
+        display: block;
+        text-align: center;
+        color: #c9a96e;
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        padding: 14px 0 4px;
+        opacity: 0.6;
     }
 }

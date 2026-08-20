@@ -270,12 +270,14 @@ document.querySelectorAll(".nav-links a").forEach(link=>{
         navLinks.classList.remove("active");
         menuToggle.classList.remove("active");
         menuToggle.innerHTML="☰";
-        
+
+        // Gallery link: just scroll to portfolio section (always visible now)
         if (link.id === "galleryLink") {
-            document.body.classList.add("gallery-active");
-            window.scrollTo(0, 0);
-        } else {
-            document.body.classList.remove("gallery-active");
+            e.preventDefault();
+            const portfolioSection = document.getElementById("portfolio");
+            if (portfolioSection) {
+                portfolioSection.scrollIntoView({ behavior: "smooth" });
+            }
         }
 
     });
