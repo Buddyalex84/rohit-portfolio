@@ -1061,6 +1061,42 @@
       transition: .3s;
     }
 
+    /* Moving portfolio film strip */
+    .portfolio-marquee {
+      cursor: grab;
+      margin: 0 -60px;
+      overflow: hidden;
+      touch-action: pan-y;
+      user-select: none;
+    }
+
+    .portfolio-marquee.dragging {
+      cursor: grabbing;
+    }
+
+    .portfolio-marquee-track {
+      display: flex;
+      gap: 18px;
+      padding: 0 10px;
+      width: max-content;
+      will-change: transform;
+    }
+
+    .portfolio-marquee .port-card {
+      flex: 0 0 clamp(260px, 26vw, 400px);
+      opacity: 1;
+      transform: none;
+    }
+
+    .portfolio-marquee .port-card:nth-child(n) .port-thumb {
+      aspect-ratio: 9 / 12;
+    }
+
+    .portfolio-marquee~.view-more-wrapper,
+    .portfolio-marquee~.extra-projects {
+      display: none;
+    }
+
     .view-more-btn:hover {
       background: #c9a96e;
       color: #111;
@@ -1439,6 +1475,10 @@
 
       section {
         padding: 70px 24px;
+      }
+
+      .portfolio-marquee {
+        margin: 0 -24px;
       }
 
       .hero {

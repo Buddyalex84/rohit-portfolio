@@ -91,6 +91,112 @@
   });
 })();
 
+// ── MOVING PORTFOLIO GALLERY ──
+(function () {
+  const portfolio = document.getElementById('portfolio');
+  const primaryGrid = portfolio?.querySelector('.portfolio-grid:not(.extra-projects)');
+  const extraGrid = document.getElementById('extraProjects');
+  if (!portfolio || !primaryGrid || !extraGrid) return;
+
+  const cards = [
+    ...primaryGrid.querySelectorAll(':scope > .port-card'),
+    ...extraGrid.querySelectorAll(':scope > .port-card')
+  ];
+  if (!cards.length) return;
+
+  const viewport = document.createElement('div');
+  viewport.className = 'portfolio-marquee';
+  viewport.setAttribute('aria-label', 'Draggable portfolio video gallery');
+  const track = document.createElement('div');
+  track.className = 'portfolio-marquee-track';
+  viewport.appendChild(track);
+
+  cards.forEach(card => track.appendChild(card));
+  cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    clone.dataset.marqueeClone = 'true';
+    track.appendChild(clone);
+  });
+
+  primaryGrid.before(viewport);
+  primaryGrid.remove();
+  extraGrid.remove();
+
+  let offset = 0;
+  let paused = false;
+  let dragging = false;
+  let pointerStart = 0;
+  let offsetStart = 0;
+  let moved = false;
+  let suppressClick = false;
+  let previousTime = 0;
+
+  function halfWidth() { return track.scrollWidth / 2; }
+  function normalize() {
+    const width = halfWidth();
+    if (!width) return;
+    while (offset <= -width) offset += width;
+    while (offset > 0) offset -= width;
+  }
+  function draw() { track.style.transform = `translate3d(${offset}px, 0, 0)`; }
+  function animate(time) {
+    if (!previousTime) previousTime = time;
+    const delta = Math.min(time - previousTime, 48);
+    previousTime = time;
+    if (!paused && !dragging && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      offset -= delta * 0.03;
+      normalize();
+      draw();
+    }
+    requestAnimationFrame(animate);
+  }
+
+  viewport.addEventListener('mouseenter', () => { paused = true; });
+  viewport.addEventListener('mouseleave', () => { if (!dragging) paused = false; });
+  viewport.addEventListener('pointerdown', event => {
+    dragging = true;
+    moved = false;
+    paused = true;
+    pointerStart = event.clientX;
+    offsetStart = offset;
+    viewport.classList.add('dragging');
+    viewport.setPointerCapture(event.pointerId);
+  });
+  viewport.addEventListener('pointermove', event => {
+    if (!dragging) return;
+    const distance = event.clientX - pointerStart;
+    if (Math.abs(distance) > 6) moved = true;
+    offset = offsetStart + distance;
+    normalize();
+    draw();
+  });
+  function stopDragging(event) {
+    if (!dragging) return;
+    dragging = false;
+    suppressClick = moved;
+    viewport.classList.remove('dragging');
+    if (viewport.hasPointerCapture(event.pointerId)) viewport.releasePointerCapture(event.pointerId);
+    paused = false;
+  }
+  viewport.addEventListener('pointerup', stopDragging);
+  viewport.addEventListener('pointercancel', stopDragging);
+  track.addEventListener('click', event => {
+    if (suppressClick) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      suppressClick = false;
+      return;
+    }
+    const clone = event.target.closest('[data-marquee-clone="true"]');
+    if (!clone) return;
+    const source = clone.dataset.src;
+    const original = cards.find(card => card.dataset.src === source);
+    if (original) original.click();
+  }, true);
+  window.addEventListener('resize', () => { normalize(); draw(); });
+  requestAnimationFrame(animate);
+})();
+
 // ── VIDEO LIGHTBOX ──
 (function () {
   const modal = document.getElementById('videoModal');
