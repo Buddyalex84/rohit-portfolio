@@ -27,8 +27,8 @@
   function revealHero() {
     [
       { id: 'hEyebrow', d: 0 }, { id: 'hLine1', d: 150 }, { id: 'hLine2', d: 280 },
-      { id: 'hSub', d: 420 }, { id: 'hDesc', d: 540 }, { id: 'hBrands', d: 620 },
-      { id: 'hBtn1', d: 720 }
+      { id: 'hSub', d: 420 }, { id: 'hDesc', d: 540 },
+      { id: 'hBtn1', d: 640 }, { id: 'hBtn2', d: 740 }
     ].forEach(({ id, d }) => setTimeout(() => document.getElementById(id)?.classList.add('in'), d));
     setTimeout(() => {
       document.getElementById('heroScroll')?.classList.add('in');
@@ -154,45 +154,59 @@
   viewport.addEventListener('mouseenter', () => { paused = true; });
   viewport.addEventListener('mouseleave', () => { if (!dragging) paused = false; });
   viewport.addEventListener('pointerdown', event => {
+    if (event.button !== undefined && event.button !== 0) return;
     dragging = true;
     moved = false;
     paused = true;
     pointerStart = event.clientX;
     offsetStart = offset;
-    viewport.classList.add('dragging');
-    viewport.setPointerCapture(event.pointerId);
   });
   viewport.addEventListener('pointermove', event => {
     if (!dragging) return;
     const distance = event.clientX - pointerStart;
-    if (Math.abs(distance) > 6) moved = true;
-    offset = offsetStart + distance;
-    normalize();
-    draw();
+    if (Math.abs(distance) > 6) {
+      if (!moved) {
+        moved = true;
+        viewport.classList.add('dragging');
+        try {
+          viewport.setPointerCapture(event.pointerId);
+        } catch (e) { }
+      }
+      offset = offsetStart + distance;
+      normalize();
+      draw();
+    }
   });
   function stopDragging(event) {
     if (!dragging) return;
     dragging = false;
     suppressClick = moved;
     viewport.classList.remove('dragging');
-    if (viewport.hasPointerCapture(event.pointerId)) viewport.releasePointerCapture(event.pointerId);
+    if (viewport.hasPointerCapture(event.pointerId)) {
+      try {
+        viewport.releasePointerCapture(event.pointerId);
+      } catch (e) { }
+    }
     paused = false;
+    if (suppressClick) {
+      setTimeout(() => { suppressClick = false; }, 80);
+    }
   }
   viewport.addEventListener('pointerup', stopDragging);
   viewport.addEventListener('pointercancel', stopDragging);
-  track.addEventListener('click', event => {
-    if (suppressClick) {
+
+  viewport.addEventListener('click', event => {
+    if (suppressClick || moved) {
       event.preventDefault();
       event.stopImmediatePropagation();
-      suppressClick = false;
       return;
     }
-    const clone = event.target.closest('[data-marquee-clone="true"]');
-    if (!clone) return;
-    const source = clone.dataset.src;
-    const original = cards.find(card => card.dataset.src === source);
-    if (original) original.click();
-  }, true);
+    const card = event.target.closest('.video-card');
+    if (card) {
+      window.openPortfolioVideo?.(card);
+    }
+  });
+
   window.addEventListener('resize', () => { normalize(); draw(); });
   requestAnimationFrame(animate);
 })();
@@ -204,17 +218,24 @@
   const lbl = document.getElementById('modalLabel');
   const close = document.getElementById('closeModal');
 
+  function openVideo(card) {
+    if (!card) return;
+    const src = card.dataset.src;
+    if (!src) return;
+    const title = card.dataset.title || card.querySelector('.port-title')?.textContent || '';
+    if (modal.style.display === 'flex' && vid.src.endsWith(src)) return;
+    vid.src = src;
+    vid.currentTime = 0;
+    lbl.textContent = title;
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    vid.play().catch(() => { });
+  }
+  window.openPortfolioVideo = openVideo;
+
   document.querySelectorAll('.video-card').forEach(card => {
     card.style.cursor = 'pointer';
-    card.addEventListener('click', () => {
-      const src = card.dataset.src;
-      const title = card.dataset.title || card.querySelector('.port-title')?.textContent || '';
-      vid.src = src;
-      lbl.textContent = title;
-      modal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-      vid.play().catch(() => { });
-    });
+    card.addEventListener('click', () => openVideo(card));
   });
 
   function closeModal() {
