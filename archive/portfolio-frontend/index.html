@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>studio.4ever — Creative Marketing &amp; Media Production Agency</title>
+  <link rel="icon" type="image/png" href="media/favicon.png" />
+  <link rel="apple-touch-icon" href="media/favicon.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ════ INTRO ════ -->
+  <div id="intro">
+    <div class="intro-shutter">
+      <div class="shutter-blade"></div>
+      <div class="shutter-blade"></div>
+      <div class="shutter-blade"></div>
+      <div class="shutter-blade"></div>
+      <div class="shutter-blade"></div>
+    </div>
+    <div class="intro-name">
+      <span class="intro-first" id="introFirst">We Shoot We Deliver</span>
+      <span class="intro-last" id="introLast">Memories</span>
+      <div class="intro-brand" id="introTag">@STUDIO.4EVER: CREATIVE MARKETING &amp; MEDIA</div>
+    </div>
+    <div class="intro-progress">
+      <div class="intro-progress-bar" id="introBar"></div>
+    </div>
+  </div>
+
+  <!-- ════ NAV ════ -->
+  <nav id="mainNav">
+
+    <a href="#home" class="nav-logo">
+      studio<span>.4ever</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#packages">Packages &amp; Pricing</a></li>
+      <li class="desktop-only"><a href="#portfolio">Work</a></li>
+      <li class="mobile-only"><a href="#portfolio" id="galleryLink">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+  </nav>
+
+  <!-- ════ HERO ════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <canvas id="particles"></canvas>
+
+    <!-- Film reel SVG decoration -->
+    <svg class="film-reel" id="filmReel" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="96" stroke="#c9a96e" stroke-width="0.5" />
+      <circle cx="100" cy="100" r="70" stroke="#c9a96e" stroke-width="0.5" />
+      <circle cx="100" cy="100" r="44" stroke="#c9a96e" stroke-width="1" />
+      <circle cx="100" cy="100" r="16" stroke="#c9a96e" stroke-width="1.5" />
+      <!-- Sprocket holes -->
+      <circle cx="100" cy="18" r="7" stroke="#c9a96e" stroke-width="0.5" />
+      <circle cx="100" cy="182" r="7" stroke="#c9a96e" stroke-width="0.5" />
+      <circle cx="18" cy="100" r="7" stroke="#c9a96e" stroke-width="0.5" />
+      <circle cx="182" cy="100" r="7" stroke="#c9a96e" stroke-width="0.5" />
+      <circle cx="44" cy="44" r="7" stroke="#c9a96e" stroke-width="0.5" />
+      <circle cx="156" cy="44" r="7" stroke="#c9a96e" stroke-width="0.5" />
+      <circle cx="44" cy="156" r="7" stroke="#c9a96e" stroke-width="0.5" />
+      <circle cx="156" cy="156" r="7" stroke="#c9a96e" stroke-width="0.5" />
+      <!-- Spokes -->
+      <line x1="100" y1="56" x2="100" y2="25" stroke="#c9a96e" stroke-width="0.3" />
+      <line x1="100" y1="144" x2="100" y2="175" stroke="#c9a96e" stroke-width="0.3" />
+      <line x1="56" y1="100" x2="25" y2="100" stroke="#c9a96e" stroke-width="0.3" />
+      <line x1="144" y1="100" x2="175" y2="100" stroke="#c9a96e" stroke-width="0.3" />
+      <line x1="68" y1="68" x2="47" y2="47" stroke="#c9a96e" stroke-width="0.3" />
+      <line x1="132" y1="68" x2="153" y2="47" stroke="#c9a96e" stroke-width="0.3" />
+      <line x1="68" y1="132" x2="47" y2="153" stroke="#c9a96e" stroke-width="0.3" />
+      <line x1="132" y1="132" x2="153" y2="153" stroke="#c9a96e" stroke-width="0.3" />
+      <circle cx="100" cy="100" r="5" fill="#c9a96e" opacity="0.7" />
+    </svg>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow" id="hEyebrow">Creative Marketing &amp; Visual Production — Scaling Brands Globally</div>
+      <h1>
+        <span class="hero-h1-line" id="hLine1">studio</span>
+        <span class="hero-h1-line" id="hLine2"><em>.4ever</em></span>
+      </h1>
+      <div class="hero-sub" id="hSub">Creative Marketing Agency &nbsp;·&nbsp; Video Production &nbsp;·&nbsp; Content Strategy</div>
+      <p class="hero-desc" id="hDesc">We are studio.4ever — a full-scale creative marketing and media production agency. We craft high-impact brand campaigns, cinematic video commercials, scroll-stopping social reels, and visual storytelling that converts audiences into loyal customers.</p>
+      <div class="btn-group">
+        <a href="https://wa.me/919109510469?text=Hi%20Studio.4ever%20I%27d%20like%20to%20know%20more%20about%20your%20services"
+          target="_blank" rel="noopener noreferrer" class="btn-primary" id="hBtn1">
+          <span>Work With Us</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a href="#portfolio" class="btn-secondary" id="hBtn2">
+          <span>See our work</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M7 1v12M1 7l6 6 6-6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll" id="heroScroll">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- ════ ABOUT ════ -->
+  <section id="about">
+    <div class="about-visual reveal-left">
+      <div class="about-frame">
+        <img
+          src="media/studio-agency.jpg"
+          alt="studio.4ever Creative Marketing Agency"
+          style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;" />
+        <div class="about-tag">Est. 2019</div>
+      </div>
+    </div>
+    <div class="about-text">
+      <div class="section-label reveal d1">About studio.4ever</div>
+      <h2 class="reveal d2">Creative vision.<br><em>Lasting impact.</em></h2>
+      <p class="reveal d3"><strong style="color:var(--gold)">Studio.4ever</strong> is a creative studio that transforms ideas into powerful visuals, engaging content, and meaningful digital experiences. We combine creativity, technology, and strategy to help brands build a distinctive identity, connect with their audiences, and grow with confidence.</p>
+
+      <div class="about-pillars reveal d4">
+        <div class="about-pillar">
+          <div class="pillar-heading"><span class="pillar-num">01 —</span> Creative by design</div>
+          <p>Every reel, visual, website, and campaign we create has a purpose — to capture attention, communicate your value, and make your brand stand out.</p>
+        </div>
+
+        <div class="about-pillar">
+          <div class="pillar-heading"><span class="pillar-num">02 —</span> One team. Every creative need.</div>
+          <p>From video production and editing to website development, branding, social media management, and digital marketing, we bring creative expertise together under one roof to deliver a consistent brand experience.</p>
+        </div>
+
+        <div class="about-pillar">
+          <div class="pillar-heading"><span class="pillar-num">03 —</span> Your growth is our goal</div>
+          <p>We believe great creative work should do more than look good. Our focus is on strengthening your brand presence, engaging the right audience, and creating digital experiences that support your business goals.</p>
+        </div>
+
+        <div class="about-pillar">
+          <div class="pillar-heading"><span class="pillar-num">04 —</span> Three minds. One creative vision.</div>
+          <p>Studio.4ever is led by <strong style="color:var(--light)">Rohit Vishwakarma</strong>, Founder, alongside <strong style="color:var(--light)">Ansh Verma</strong> and <strong style="color:var(--light)">Aaditya Vishwakarma</strong>. Together, they bring ideas to life through creativity, collaboration, and a shared commitment to helping brands express their identity and make a lasting impression.</p>
+        </div>
+      </div>
+
+      <p class="reveal d4">With a growing team of creative professionals, we work with brands across industries to turn ambitious ideas into impactful experiences.</p>
+
+      <div class="about-manifesto reveal d5">
+        <div class="manifesto-tagline">DESIGN &nbsp;·&nbsp; DEVELOP &nbsp;·&nbsp; DELIVER</div>
+        <p class="manifesto-quote">Your vision deserves to be unforgettable.<br><em>Let's create something extraordinary.</em></p>
+      </div>
+
+      <div class="about-stats">
+        <div class="reveal d3">
+          <div class="stat-num" data-target="5" data-suffix="+">0</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="reveal d4">
+          <div class="stat-num" data-target="200" data-suffix="+">0</div>
+          <div class="stat-label">Campaigns &amp; Edits</div>
+        </div>
+        <div class="reveal d5">
+          <div class="stat-num" data-target="50" data-suffix="+">0</div>
+          <div class="stat-label">Brands Scaled</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ════ SERVICES ════ -->
+  <section id="services">
+    <div class="services-header reveal">
+      <div class="services-eyebrow">— OUR SERVICES</div>
+      <h2 class="services-main-title">Everything your brand needs to stand out</h2>
+      <p class="services-subtext">From strategy to screen — creative services built to move brands forward.</p>
+    </div>
+
+    <div class="services-grid-container reveal">
+      <div class="services-grid">
+
+        <!-- 1. Brand Strategy -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="m22 2-7.5 7.5" />
+              <circle cx="12" cy="12" r="6" />
+              <circle cx="12" cy="12" r="2" />
+            </svg>
+          </div>
+          <h3 class="service-title">Brand Strategy</h3>
+          <p class="service-desc">Build a distinct identity, clear positioning and a creative direction your audience remembers.</p>
+        </div>
+
+        <!-- 2. Social Media Growth -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h3 class="service-title">Social Media Growth</h3>
+          <p class="service-desc">Content planning, captions, posting and community management to strengthen your online presence.</p>
+        </div>
+
+        <!-- 3. Commercial Ads & Campaigns -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 11 18-5v12L3 13v-2z" />
+              <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+            </svg>
+          </div>
+          <h3 class="service-title">Commercial Ads &amp; Campaigns</h3>
+          <p class="service-desc">High-impact brand advertisements and creative campaigns designed to connect with the right audience.</p>
+        </div>
+
+        <!-- 4. Viral Reels & Shorts -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="18" x="3" y="3" rx="4" />
+              <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" />
+            </svg>
+          </div>
+          <h3 class="service-title">Viral Reels &amp; Shorts</h3>
+          <p class="service-desc">Attention-grabbing short-form videos, highlight reels and platform-ready content.</p>
+        </div>
+
+        <!-- 5. Cinematic Editing -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" x2="14" y1="6" y2="6" /><line x1="18" x2="20" y1="6" y2="6" /><circle cx="16" cy="6" r="2" />
+              <line x1="4" x2="8" y1="12" y2="12" /><line x1="12" x2="20" y1="12" y2="12" /><circle cx="10" cy="12" r="2" />
+              <line x1="4" x2="16" y1="18" y2="18" /><line x1="20" x2="20" y1="18" y2="18" /><circle cx="18" cy="18" r="2" />
+            </svg>
+          </div>
+          <h3 class="service-title">Cinematic Editing</h3>
+          <p class="service-desc">Professional edits, color grading, pacing and sound design for a premium finish.</p>
+        </div>
+
+        <!-- 6. Video Production & Storytelling -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m22 8-6 4 6 4V8z" />
+              <rect width="14" height="12" x="2" y="6" rx="2" />
+            </svg>
+          </div>
+          <h3 class="service-title">Video Production &amp; Storytelling</h3>
+          <p class="service-desc">Brand stories, event coverage, weddings, films, YouTube production, music videos and product showcases.</p>
+        </div>
+
+        <!-- 7. Something else in mind? (From User's Custom Ask Picture) -->
+        <div class="service-card service-card-custom" id="customServiceCard">
+          <div class="service-icon-box service-icon-custom">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </div>
+          <h3 class="service-title service-title-gold">Something else in mind?</h3>
+          <p class="service-desc">Tell us what your brand needs — most of our best work started as a custom ask.</p>
+          <button class="service-cta-btn" id="customAskBtn" type="button">
+            <span>Inquire Custom Ask</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Custom Blueprint Action Banner (Columns 2 & 3) -->
+        <div class="service-custom-banner">
+          <div class="custom-banner-content">
+            <span class="custom-badge">Tailored Solutions</span>
+            <h4>Need a specialized production package?</h4>
+            <p>From custom multi-camera campaigns to end-to-end media retainers, we design bespoke scopes tailored to your timeline, brand vision, and budget.</p>
+          </div>
+          <div class="custom-banner-actions">
+            <a href="https://wa.me/919109510469?text=Hi%20studio.4ever,%20I%20have%20a%20custom%20project%20in%20mind!" class="btn-whatsapp-pill" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+              <span>Instant WhatsApp</span>
+            </a>
+            <button class="btn-gold-pill" id="customBannerBtn" type="button">
+              <span>Start Your Custom Ask &rarr;</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ════ CASE STUDIES (PORTFOLIO REELS) ════ -->
+  <section id="portfolio">
+    <div class="case-studies-header reveal">
+      <div class="services-eyebrow">— CASE STUDIES</div>
+      <h2 class="services-main-title">Recent edits, straight from the feed</h2>
+      <p class="services-subtext">Scroll through a few reels we've cut and grown for clients.</p>
+    </div>
+
+    <div class="reels-carousel-container reveal">
+      <div class="reels-track" id="reelsTrack">
+
+        <!-- 1. AI Storytelling -->
+        <div class="reel-card video-card" data-src="videos/video04.mp4" data-title="AI Storytelling">
+          <div class="reel-media-wrap">
+            <video src="videos/video04.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">AI Storytelling</span>
+          </div>
+        </div>
+
+        <!-- 2. Edit 01 — Reel -->
+        <div class="reel-card video-card" data-src="videos/video05.mp4" data-title="Edit 01 — Reel">
+          <div class="reel-media-wrap">
+            <video src="videos/video05.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">Edit 01 — Reel</span>
+          </div>
+        </div>
+
+        <!-- 3. Edit 02 — Reel -->
+        <div class="reel-card video-card" data-src="videos/bung06.mp4" data-title="Edit 02 — Reel">
+          <div class="reel-media-wrap">
+            <video src="videos/bung06.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">Edit 02 — Reel</span>
+          </div>
+        </div>
+
+        <!-- 4. Edit 03 — Reel -->
+        <div class="reel-card video-card" data-src="videos/video07.mp4" data-title="Edit 03 — Reel">
+          <div class="reel-media-wrap">
+            <video src="videos/video07.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">Edit 03 — Reel</span>
+          </div>
+        </div>
+
+        <!-- 5. Edit 04 — Reel -->
+        <div class="reel-card video-card" data-src="videos/video08.mp4" data-title="Edit 04 — Reel">
+          <div class="reel-media-wrap">
+            <video src="videos/video08.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">Edit 04 — Reel</span>
+          </div>
+        </div>
+
+        <!-- 6. Edit 05 — Reel -->
+        <div class="reel-card video-card" data-src="videos/video09.mp4" data-title="Edit 05 — Reel">
+          <div class="reel-media-wrap">
+            <video src="videos/video09.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">Edit 05 — Reel</span>
+          </div>
+        </div>
+
+        <!-- 7. Edit 06 — Reel -->
+        <div class="reel-card video-card" data-src="videos/video10.mp4" data-title="Edit 06 — Reel">
+          <div class="reel-media-wrap">
+            <video src="videos/video10.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">Edit 06 — Reel</span>
+          </div>
+        </div>
+
+        <!-- 8. Edit 07 — Reel -->
+        <div class="reel-card video-card" data-src="videos/video11.mp4" data-title="Edit 07 — Reel">
+          <div class="reel-media-wrap">
+            <video src="videos/video11.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">Edit 07 — Reel</span>
+          </div>
+        </div>
+
+        <!-- 9. Edit 08 — Reel -->
+        <div class="reel-card video-card" data-src="videos/video12.mp4" data-title="Edit 08 — Reel">
+          <div class="reel-media-wrap">
+            <video src="videos/video12.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">Edit 08 — Reel</span>
+          </div>
+        </div>
+
+        <!-- 10. Love Over Coffee -->
+        <div class="reel-card video-card reel-card-extra" data-src="videos/Love-Over-Coffee.mp4" data-title="Love Over Coffee">
+          <div class="reel-media-wrap">
+            <video src="videos/Love-Over-Coffee.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">Love Over Coffee</span>
+          </div>
+        </div>
+
+        <!-- 11. The Hangout Factory -->
+        <div class="reel-card video-card reel-card-extra" data-src="videos/The-Hangout-Factory.mp4" data-title="The Hangout Factory">
+          <div class="reel-media-wrap">
+            <video src="videos/The-Hangout-Factory.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">The Hangout Factory</span>
+          </div>
+        </div>
+
+        <!-- 12. Bubble Bliss -->
+        <div class="reel-card video-card reel-card-extra" data-src="videos/bubblebliss.mp4" data-title="Bubble Bliss">
+          <div class="reel-media-wrap">
+            <video src="videos/bubblebliss.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">Bubble Bliss</span>
+          </div>
+        </div>
+
+        <!-- 13. Dough Dynasty -->
+        <div class="reel-card video-card reel-card-extra" data-src="videos/doughdynasty.mp4" data-title="Dough Dynasty">
+          <div class="reel-media-wrap">
+            <video src="videos/doughdynasty.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">Dough Dynasty</span>
+          </div>
+        </div>
+
+        <!-- 14. Asian Bistro -->
+        <div class="reel-card video-card reel-card-extra" data-src="videos/asian-bistro.mp4" data-title="Asian Bistro">
+          <div class="reel-media-wrap">
+            <video src="videos/asian-bistro.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">Asian Bistro</span>
+          </div>
+        </div>
+
+        <!-- 15. Mangalbhog -->
+        <div class="reel-card video-card reel-card-extra" data-src="videos/mangalbhog.mp4" data-title="Mangalbhog">
+          <div class="reel-media-wrap">
+            <video src="videos/mangalbhog.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">Mangalbhog</span>
+          </div>
+        </div>
+
+        <!-- 16. Venue Ambience -->
+        <div class="reel-card video-card reel-card-extra" data-src="videos/video1.mp4" data-title="Venue Ambience Showcase">
+          <div class="reel-media-wrap">
+            <video src="videos/video1.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">Venue Ambience Showcase</span>
+          </div>
+        </div>
+
+        <!-- 17. Frankfinn Brand Story -->
+        <div class="reel-card video-card reel-card-extra" data-src="videos/video2.mp4" data-title="Frankfinn Brand Story">
+          <div class="reel-media-wrap">
+            <video src="videos/video2.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">Frankfinn Brand Story</span>
+          </div>
+        </div>
+
+        <!-- 18. Starbucks Brand Reel -->
+        <div class="reel-card video-card reel-card-extra" data-src="videos/video3.mp4" data-title="Starbucks Brand Reel">
+          <div class="reel-media-wrap">
+            <video src="videos/video3.mp4" muted loop playsinline preload="metadata"></video>
+            <div class="reel-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#e5c07b" stroke-width="2" />
+                <polygon points="10 8 16 12 10 16 10 8" fill="#e5c07b" />
+              </svg>
+            </div>
+          </div>
+          <div class="reel-footer">
+            <span class="reel-caption">Starbucks Brand Reel</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls & Progress bar bar -->
+      <div class="reels-controls-row">
+        <div class="reels-scroll-track-wrapper">
+          <div class="reels-scroll-track">
+            <div class="reels-scroll-thumb" id="reelsScrollThumb"></div>
+          </div>
+        </div>
+        <div class="reels-action-bar">
+          <button class="btn-toggle-all-videos" id="toggleAllVideosBtn" type="button" aria-expanded="false">
+            <span class="btn-toggle-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+              </svg>
+            </span>
+            <span class="btn-toggle-text">Show All 18 Videos</span>
+            <span class="btn-toggle-badge" id="videoCountBadge">18 Total</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ════ PACKAGES & APPOINTMENT BOOKING ════ -->
+  <section id="packages">
+    <div class="packages-header reveal">
+      <div class="services-eyebrow">— ITINERARY &amp; PACKAGES</div>
+      <h2 class="services-main-title">Content that connects. Visuals that elevate.</h2>
+      <p class="services-subtext">Let's turn your cafe, restaurant, or business into an unforgettable story. Pick a package below to book your appointment.</p>
+    </div>
+
+    <!-- Interactive Packages Grid -->
+    <div class="packages-grid reveal">
+
+      <!-- Package 1: Individual Reel -->
+      <div class="package-card" data-package="Individual Reel Package (₹1,499 / reel)" data-price="₹1,499 / reel">
+        <div class="package-card-header">
+          <div class="package-badge-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+              <line x1="7" y1="2" x2="7" y2="22"></line>
+              <line x1="17" y1="2" x2="17" y2="22"></line>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <line x1="2" y1="7" x2="7" y2="7"></line>
+              <line x1="2" y1="17" x2="7" y2="17"></line>
+              <line x1="17" y1="17" x2="22" y2="17"></line>
+              <line x1="17" y1="7" x2="22" y2="7"></line>
+            </svg>
+          </div>
+          <div class="package-card-title-wrap">
+            <span class="package-order-num">01. PRODUCTION</span>
+            <h3 class="package-title">Individual Reel Package</h3>
+          </div>
+        </div>
+
+        <div class="package-price-wrap">
+          <span class="currency-symbol">₹</span>
+          <span class="price-value">1,499</span>
+          <span class="price-unit">/ REEL</span>
+        </div>
+
+        <div class="package-features-block">
+          <div class="features-label">INCLUDES:</div>
+          <ul class="package-features-list">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Ambience Showcase</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Food &amp; Beverage Highlights</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Special Offers &amp; Promo Coverage</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Café / Store Address &amp; Location Tag</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Professional Voiceover Support</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Cinematic Transitions &amp; Pacing</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Preferred Editing Style Tailored to Brand</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Color Grading &amp; Sound Design</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>High-Quality 4K/HD Final Delivery</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Add-on badge inside reel package -->
+        <div class="package-addon-card">
+          <div class="addon-badge">ADD-ON</div>
+          <div class="addon-content">
+            <div class="addon-title">Reel with Professional Model</div>
+            <div class="addon-price">₹2,500 <span>/ REEL</span></div>
+            <p class="addon-desc">Includes everything above along with an on-screen professional model for a more engaging and authentic promotional shoot.</p>
+          </div>
+        </div>
+
+        <button class="package-select-btn" type="button" data-select-package="Individual Reel Package">
+          <span>Book Appointment For Reel &rarr;</span>
+        </button>
+      </div>
+
+      <!-- Package 2: Premium Page Management (Featured) -->
+      <div class="package-card package-card-featured" data-package="Premium Page Management (₹24,999 / month)" data-price="₹24,999 / month">
+        <div class="featured-ribbon">MOST POPULAR</div>
+        <div class="package-card-header">
+          <div class="package-badge-icon package-badge-featured">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"></path>
+              <circle cx="12" cy="19" r="2"></circle>
+            </svg>
+          </div>
+          <div class="package-card-title-wrap">
+            <span class="package-order-num">02. FULL GROWTH RETAINER</span>
+            <h3 class="package-title">Premium Page Management</h3>
+          </div>
+        </div>
+
+        <div class="package-price-wrap">
+          <span class="currency-symbol">₹</span>
+          <span class="price-value">24,999</span>
+          <span class="price-unit">/ MONTH</span>
+        </div>
+
+        <div class="package-features-block">
+          <div class="features-label">INCLUDES:</div>
+          <ul class="package-features-list">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Complete Instagram Page Handling</strong></span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>8 Professional High-Impact Reels</strong></span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Weekly Engaging Stories</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Weekly Branded Carousel &amp; Static Posts</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Trend-Based Content Strategy</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Authenticity &amp; Brand Positioning</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Promotion &amp; Collaboration Opportunities</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Instagram Meta Ad Management &amp; Optimization</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="package-notice-box">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          <span>Ad spend will be borne separately by the client.</span>
+        </div>
+
+        <button class="package-select-btn package-btn-featured" type="button" data-select-package="Premium Page Management">
+          <span>Book Appointment For Management &rarr;</span>
+        </button>
+      </div>
+
+      <!-- Package 3: Content Package -->
+      <div class="package-card" data-package="Content Package (₹19,999 / month)" data-price="₹19,999 / month">
+        <div class="package-card-header">
+          <div class="package-badge-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <div class="package-card-title-wrap">
+            <span class="package-order-num">03. CREATIVE ASSETS</span>
+            <h3 class="package-title">Content Package</h3>
+          </div>
+        </div>
+
+        <div class="package-price-wrap">
+          <span class="currency-symbol">₹</span>
+          <span class="price-value">19,999</span>
+          <span class="price-unit">/ MONTH</span>
+        </div>
+
+        <div class="package-features-block">
+          <div class="features-label">INCLUDES:</div>
+          <ul class="package-features-list">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>8 Professional High-Impact Reels</strong></span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>10 Creative Static &amp; Graphic Posts</strong></span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>2 Curated Stories Every Week</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Trend-Based Content Planning</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Professional Editing &amp; Custom Branding</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="package-notice-box">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          <span>Includes content creation only. Instagram page handling is not included.</span>
+        </div>
+
+        <button class="package-select-btn" type="button" data-select-package="Content Package">
+          <span>Book Appointment For Content &rarr;</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Payment Terms & Agency Pillars Matching Card Design -->
+    <div class="packages-bottom-grid reveal">
+      <div class="payment-terms-card">
+        <div class="terms-header">
+          <div class="terms-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
+            </svg>
+          </div>
+          <h4>Payment Terms &amp; Assurance</h4>
+        </div>
+        <div class="terms-splits">
+          <div class="terms-split-col">
+            <div class="percent-circle">50%</div>
+            <div class="terms-split-info">
+              <h5>50% Advance Payment</h5>
+              <p>Advance payment of 50% is required before the production &amp; shoot schedule begins.</p>
+            </div>
+          </div>
+          <div class="terms-split-col">
+            <div class="percent-circle">50%</div>
+            <div class="terms-split-info">
+              <h5>Remaining 50% Payment</h5>
+              <p>The remaining 50% balance will be collected before the delivery of final edits.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="package-quote-card">
+        <div class="quote-handwritten">"Let's create something amazing together!" ♡</div>
+        <p class="quote-agency-tag">studio.4ever — Create · Inspire · Elevate</p>
+        <a href="#contact" class="btn-book-direct" id="quickBookBtn">
+          <span>Schedule Free Consultation &rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Agency Service Badges (Cinematic Quality, Timely Delivery, etc.) -->
+    <div class="packages-pillars-bar reveal">
+      <div class="pillar-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+        <div>
+          <h6>Cinematic Quality</h6>
+          <span>High-end editing that makes your brand stand out.</span>
+        </div>
+      </div>
+      <div class="pillar-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        <div>
+          <h6>Timely Delivery</h6>
+          <span>On-time delivery guaranteed for all assets.</span>
+        </div>
+      </div>
+      <div class="pillar-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        <div>
+          <h6>Client Focused</h6>
+          <span>Tailored strategies for your brand and revenue goals.</span>
+        </div>
+      </div>
+      <div class="pillar-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <div>
+          <h6>Trend Driven</h6>
+          <span>We follow platform algorithms so you stay ahead.</span>
+        </div>
+      </div>
+      <div class="pillar-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+        <div>
+          <h6>Dedicated Support</h6>
+          <span>Always accessible to assist you at every step.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+
+
+  <!-- ════ CONTACT ════ -->
+  <section id="contact">
+
+    <div class="contact-intro reveal-left">
+
+      <div class="section-label">Partner With Us</div>
+
+      <h2>
+        Let's scale <br>
+        <em>together</em>
+      </h2>
+
+      <p>
+        Every high-converting brand campaign starts with a conversation.
+        Tell us about your company, your marketing goals, and the vision you want to bring to life.
+      </p>
+
+      <p>
+        Available for brand campaigns, creative shoots, and video production worldwide.
+        We respond within 24 hours — let's build something unforgettable.
+      </p>
+
+      <div style="margin-top:40px; display:flex; flex-direction:column; gap:18px;">
+
+        <a href="tel:+919109510469"
+          style="display:flex;align-items:center;gap:14px;color:var(--silver);text-decoration:none;transition:color 0.3s;"
+          onmouseover="this.style.color='#c9a96e'" onmouseout="this.style.color='var(--silver)'">
+
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.73a16 16 0 006.36 6.36l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+          </svg>
+
+          +91 91095 10469
+        </a>
+
+        <a href="mailto:studio4everhere@gmail.com"
+          style="display:flex;align-items:center;gap:14px;color:var(--silver);text-decoration:none;transition:color 0.3s;"
+          onmouseover="this.style.color='#c9a96e'" onmouseout="this.style.color='var(--silver)'">
+
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+
+          studio4everhere@gmail.com
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- Contact Form (Directly Connected to Services & Custom Ask) -->
+    <form class="contact-form reveal-right" id="portfolioContactForm" novalidate>
+      <div style="margin-bottom: 6px;">
+        <span style="font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); font-weight: 600;">Project Submission</span>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 300; color: var(--white); margin-top: 4px;">Start Your Project</h3>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contactName">Name / Brand *</label>
+          <input type="text" id="contactName" name="name" placeholder="Your name or company" required autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Email Address *</label>
+          <input type="email" id="contactEmail" name="email" placeholder="you@company.com" required autocomplete="email" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contactPhone">Phone Number</label>
+          <input type="tel" id="contactPhone" name="phone" placeholder="+91 ..." autocomplete="tel" />
+        </div>
+        <div class="form-group">
+          <label for="contactService">Service / Requirement</label>
+          <select id="contactService" name="projectType">
+            <optgroup label="✨ Packages &amp; Retainers (Book Appointment)">
+              <option value="Package: Individual Reel (₹1,499 / reel)">Individual Reel Package (₹1,499 / reel)</option>
+              <option value="Package: Reel with Model Add-on (₹2,500 / reel)">Reel with Professional Model (₹2,500 / reel)</option>
+              <option value="Package: Premium Page Management (₹24,999 / month)">Premium Page Management (₹24,999 / month)</option>
+              <option value="Package: Content Package (₹19,999 / month)">Content Package (₹19,999 / month)</option>
+            </optgroup>
+            <optgroup label="🎥 Standard Services">
+              <option value="Commercial Ads & Campaigns">Commercial Ads &amp; Campaigns</option>
+              <option value="Brand Strategy">Brand Strategy</option>
+              <option value="Social Media Growth">Social Media Growth</option>
+              <option value="Viral Reels & Shorts">Viral Reels &amp; Shorts</option>
+              <option value="Cinematic Editing">Cinematic Editing</option>
+              <option value="Video Production & Storytelling">Video Production &amp; Storytelling</option>
+              <option value="Something else in mind? (Custom Ask)">Something else in mind? (Custom Ask)</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="contactMessage">Project Goals &amp; Scope *</label>
+        <textarea id="contactMessage" name="message" rows="4" placeholder="Tell us what your brand needs — objectives, deliverables, or your custom ask..." required></textarea>
+      </div>
+
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-top:8px;">
+        <button type="submit" class="btn-submit" id="contactSubmitBtn">
+          <span>Submit Inquiry &rarr;</span>
+        </button>
+        <div id="formStatusMsg" style="font-size:13px; line-height:1.4; display:none;"></div>
+      </div>
+    </form>
+
+  </section>
+
+
+  <!-- ════ FOOTER ════ -->
+  <footer class="reveal">
+    <div>
+      <div class="footer-logo">studio <span>.4ever</span></div>
+      <div class="footer-sub">@studio.4ever · Creative Marketing &amp; Media Agency</div>
+    </div>
+
+    <div class="footer-contact">
+      <div class="contact-icons">
+        <a href="mailto:studio4everhere@gmail.com" class="contact-icon" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/studio.4ever" target="_blank" rel="noopener" class="contact-icon"
+          title="Instagram @studio.4ever">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+        </a>
+        <div class="contact-divider"></div>
+        <a href="tel:+919109510469" class="contact-icon" title="Call">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.73a16 16 0 006.36 6.36l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+          </svg>
+        </a>
+      </div>
+      <div class="contact-info">
+        <a href="mailto:studio4everhere@gmail.com" class="contact-detail">
+          <span class="contact-detail-label">Email</span>
+          <span class="contact-detail-val">studio4everhere@gmail.com</span>
+        </a>
+        <a href="tel:+919109510469" class="contact-detail">
+          <span class="contact-detail-label">Phone</span>
+          <span class="contact-detail-val">+91 91095 10469</span>
+        </a>
+        <a href="https://www.instagram.com/studio.4ever" target="_blank" class="contact-detail">
+          <span class="contact-detail-label">Instagram</span>
+          <span class="contact-detail-val">@studio.4ever</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-copy">© 2025 studio.4ever<br>All rights reserved</div>
+  </footer>
+
+  <!-- ════ VIDEO LIGHTBOX ════ -->
+  <div id="videoModal"
+    style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.96);align-items:center;justify-content:center;flex-direction:column;">
+    <button id="closeModal"
+      style="position:absolute;top:28px;right:36px;background:none;border:none;color:#c9a96e;font-size:28px;cursor:pointer;line-height:1;font-family:serif;">✕</button>
+    <video id="modalVideo" controls style="max-width:90vw;max-height:82vh;outline:none;display:block;">
+      Your browser does not support HTML5 video.
+    </video>
+    <p id="modalLabel"
+      style="color:#a0a0a0;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;margin-top:18px;"></p>
+  </div>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

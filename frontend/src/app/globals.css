@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #F2F0EA;
+  --ivory-deep: #e2ded5;
+  --charcoal: #121517;
+  --ink: #1b2024;
+  --navy: #121517;
+  --navy-deep: #0d1012;
+  --gold: #A8D5E3;
+  --gold-soft: #FF78AC;
+  --muted: #9aa8ad;
+}
+
+@theme inline {
+  --color-ivory: var(--ivory);
+  --color-ivory-deep: var(--ivory-deep);
+  --color-charcoal: var(--charcoal);
+  --color-ink: var(--ink);
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-sans-loaded);
+  --font-serif: var(--font-serif-loaded);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: var(--font-sans-loaded), "Segoe UI", sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-serif {
+  font-family: var(--font-serif-loaded), "Times New Roman", serif;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: #1b2a4a;
+  color: #f6f1e8;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link[data-active="true"]::after,
+.nav-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 1px;
+  background: var(--gold);
+}
