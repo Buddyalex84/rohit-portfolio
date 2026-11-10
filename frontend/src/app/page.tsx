@@ -12,7 +12,7 @@ const CRAFT = [
 ];
 
 export default async function HomePage() {
-  let categories = [];
+  let categories: Awaited<ReturnType<typeof api.categories>> = [];
   try {
     categories = await api.categories();
   } catch {

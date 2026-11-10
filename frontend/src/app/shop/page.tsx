@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata: Metadata = { title: "Shop" };
 
 export default async function ShopPage() {
-  let categories = [];
+  let categories: Awaited<ReturnType<typeof api.categories>> = [];
   try {
     categories = await api.categories();
   } catch {
